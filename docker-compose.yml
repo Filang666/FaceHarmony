@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  looksmax-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: looksmax_trainer
+    volumes:
+      - .:/app
+      - ./data:/app/data  # Папка с датасетами (WIDER FACE, 300-W)
+      - ./models:/app/models # Сюда будут сохраняться .pth веса
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - PYTHONUNBUFFERED=1
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    stdin_open: true # Аналог -it для взаимодействия
+    tty: true
+    command: python training.py
