@@ -1,6 +1,12 @@
 
 ## Lightweight MTCNN & Facial Looksmaxing AI
 
+[![Python 3.14+](https://img.shields.io/badge/python-3.14-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.11+-red.svg)](https://pytorch.org/)
+[![Buildozer](https://img.shields.io/badge/Buildozer-1.5.0-8A2BE2?logo=kivy&logoColor=white)](https://buildozer.readthedocs.io)
+[![Docker](https://img.shields.io/badge/docker-✓-2496ED.svg)](https://www.docker.com/)
+
+
 A mobile-ready facial detection and aesthetic analysis system built with PyTorch and Kivy. The project implements a multi-stage CNN cascade for face localization and a MobileNetV2-based landmark regressor (68 points) for calculating facial proportions and "Looksmaxing" metrics.
 
 ## 🚀 Key Features
